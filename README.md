@@ -14,7 +14,7 @@ Three production-oriented AWS designs covering global latency, static hosting, a
 
 Multi-region architecture with CloudFront and Route 53 latency-based routing. Indian users resolve toward Mumbai (`ap-south-1`); London users resolve toward `eu-west-2`. Each region runs its own ALB and a Multi-AZ Auto Scaling Group.
 
-![Scenario 1: Global low-latency application for India and London](docs/images/scenario-1-multi-region.png)
+![Scenario 1: Global low-latency application for India and London](docs/images/scenario-1-multi-region.svg)
 
 ### Approach
 
@@ -48,7 +48,7 @@ Multi-region architecture with CloudFront and Route 53 latency-based routing. In
 
 High-performance, private-origin static hosting. The S3 bucket stays locked down; CloudFront is the only reader, via Origin Access Control. Route 53 and ACM provide the custom domain and HTTPS.
 
-![Scenario 2: Hosting a static website on Amazon S3](docs/images/scenario-2-s3-static-website.png)
+![Scenario 2: Hosting a static website on Amazon S3](docs/images/scenario-2-s3-static-website.svg)
 
 ### How it works
 
@@ -92,7 +92,7 @@ High-performance, private-origin static hosting. The S3 bucket stays locked down
 
 The application tier moves to AWS for high availability and scale. The database stays in the corporate data center and is reached over an encrypted Site-to-Site VPN or AWS Direct Connect.
 
-![Scenario 3: Hybrid cloud solution for legacy applications](docs/images/scenario-3-hybrid-cloud.png)
+![Scenario 3: Hybrid cloud solution for legacy applications](docs/images/scenario-3-hybrid-cloud.svg)
 
 ### Connectivity
 
@@ -150,7 +150,7 @@ Rehost or containerize the application onto EC2 (or ECS/EKS). Deploy it in priva
 ├── README.md
 └── docs/
     └── images/
-        ├── scenario-1-multi-region.png
-        ├── scenario-2-s3-static-website.png
-        └── scenario-3-hybrid-cloud.png
+        ├── scenario-1-multi-region.svg
+        ├── scenario-2-s3-static-website.svg
+        └── scenario-3-hybrid-cloud.svg
 ```
