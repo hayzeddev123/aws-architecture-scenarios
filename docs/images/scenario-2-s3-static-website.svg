@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" role="img" aria-label="Scenario 2 static website on S3">
+  <rect width="1200" height="640" fill="#ffffff"/>
+  <text x="600" y="36" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#1f2a44">Scenario 2: Hosting a Static Website on Amazon S3</text>
+  <text x="600" y="58" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#5b6b86">High Performance | Secure | Scalable | Cost-Effective</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <circle cx="70" cy="170" r="18" fill="none" stroke="#3d4f6f" stroke-width="2"/>
+    <text x="70" y="208" text-anchor="middle" font-size="12" fill="#3d4f6f">Users</text>
+    <rect x="160" y="128" width="130" height="80" rx="12" fill="#5b3fd6"/>
+    <text x="225" y="164" text-anchor="middle" font-size="20" font-weight="700" fill="#fff">53</text>
+    <text x="225" y="186" text-anchor="middle" font-size="11" fill="#fff">Route 53 (DNS)</text>
+    <rect x="160" y="70" width="160" height="42" rx="8" fill="#fff" stroke="#9aa7c2" stroke-dasharray="4 3"/>
+    <text x="240" y="96" text-anchor="middle" font-size="11" fill="#35507a">www.example.com</text>
+    <rect x="360" y="128" width="140" height="80" rx="12" fill="#5b3fd6"/>
+    <text x="430" y="164" text-anchor="middle" font-size="13" fill="#fff">CloudFront</text>
+    <text x="430" y="184" text-anchor="middle" font-size="11" fill="#efe8ff">CDN / Edge cache</text>
+    <rect x="380" y="58" width="170" height="50" rx="8" fill="#fff" stroke="#9aa7c2" stroke-dasharray="4 3"/>
+    <text x="465" y="78" text-anchor="middle" font-size="11" fill="#35507a">Edge locations</text>
+    <text x="465" y="96" text-anchor="middle" font-size="10" fill="#5b6b86">Cached content</text>
+    <rect x="570" y="128" width="140" height="80" rx="12" fill="#2f9e4f"/>
+    <text x="640" y="164" text-anchor="middle" font-size="13" fill="#fff">Amazon S3</text>
+    <text x="640" y="184" text-anchor="middle" font-size="11" fill="#e9ffe9">Static website bucket</text>
+    <rect x="780" y="110" width="380" height="116" rx="12" fill="#fff" stroke="#8fbf8f" stroke-dasharray="5 3"/>
+    <text x="970" y="136" text-anchor="middle" font-size="13" font-weight="700" fill="#1f2a44">Website files</text>
+    <text x="850" y="168" font-size="12" fill="#35507a">index.html</text>
+    <text x="940" y="168" font-size="12" fill="#35507a">style.css</text>
+    <text x="1020" y="168" font-size="12" fill="#35507a">app.js</text>
+    <text x="1090" y="168" font-size="12" fill="#35507a">images/</text>
+    <text x="970" y="200" text-anchor="middle" font-size="11" fill="#5b6b86">HTML, CSS, JS, and static assets</text>
+    <rect x="360" y="250" width="200" height="56" rx="10" fill="#fff" stroke="#c45c5c"/>
+    <text x="460" y="274" text-anchor="middle" font-size="12" font-weight="700" fill="#a33">ACM (optional)</text>
+    <text x="460" y="292" text-anchor="middle" font-size="11" fill="#6b3b3b">HTTPS / TLS certificate</text>
+    <rect x="570" y="250" width="280" height="56" rx="10" fill="#fff" stroke="#2f9e4f"/>
+    <text x="710" y="274" text-anchor="middle" font-size="12" font-weight="700" fill="#2f6f3e">S3 bucket policy + OAC</text>
+    <text x="710" y="292" text-anchor="middle" font-size="11" fill="#35507a">Only CloudFront can read the bucket</text>
+    <line x1="88" y1="170" x2="160" y2="170" stroke="#3d4f6f" stroke-width="2"/>
+    <line x1="290" y1="168" x2="360" y2="168" stroke="#3d4f6f" stroke-width="2"/>
+    <line x1="500" y1="168" x2="570" y2="168" stroke="#3d4f6f" stroke-width="2"/>
+    <line x1="710" y1="168" x2="780" y2="168" stroke="#3d4f6f" stroke-width="2"/>
+    <line x1="430" y1="208" x2="430" y2="250" stroke="#c45c5c" stroke-width="2" stroke-dasharray="4 3"/>
+    <rect x="40" y="340" width="360" height="270" rx="12" fill="#f7f4ff" stroke="#d3c7f3"/>
+    <text x="58" y="368" font-size="14" font-weight="700" fill="#5b3fd6">How it works</text>
+    <text x="58" y="398" font-size="12" fill="#1f2a44">1. User enters www.example.com</text>
+    <text x="58" y="422" font-size="12" fill="#1f2a44">2. Route 53 routes to CloudFront</text>
+    <text x="58" y="446" font-size="12" fill="#1f2a44">3. Nearest edge serves cached content</text>
+    <text x="58" y="470" font-size="12" fill="#1f2a44">4. Cache miss fetches from S3</text>
+    <text x="58" y="494" font-size="12" fill="#1f2a44">5. S3 returns files only to CloudFront</text>
+    <rect x="420" y="340" width="370" height="270" rx="12" fill="#f4f8ff" stroke="#c5d4ee"/>
+    <text x="438" y="368" font-size="14" font-weight="700" fill="#35507a">Configuration summary</text>
+    <text x="438" y="398" font-size="12" fill="#1f2a44">Create the S3 bucket and upload files</text>
+    <text x="438" y="422" font-size="12" fill="#1f2a44">Enable static website hosting</text>
+    <text x="438" y="446" font-size="12" fill="#1f2a44">Block public access and attach OAC</text>
+    <text x="438" y="470" font-size="12" fill="#1f2a44">Create CloudFront + ACM HTTPS</text>
+    <text x="438" y="494" font-size="12" fill="#1f2a44">Alias the domain to CloudFront</text>
+    <rect x="810" y="340" width="350" height="270" rx="12" fill="#f3faf4" stroke="#b7ddc0"/>
+    <text x="828" y="368" font-size="14" font-weight="700" fill="#2f6f3e">Benefits</text>
+    <text x="828" y="398" font-size="12" fill="#1f2a44">Global CDN performance</text>
+    <text x="828" y="422" font-size="12" fill="#1f2a44">Low latency at the edge</text>
+    <text x="828" y="446" font-size="12" fill="#1f2a44">Private bucket with OAC + HTTPS</text>
+    <text x="828" y="470" font-size="12" fill="#1f2a44">Highly available and scalable</text>
+    <text x="828" y="494" font-size="12" fill="#1f2a44">Cost-effective for static content</text>
+  </g>
+</svg>
